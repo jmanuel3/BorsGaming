@@ -1,9 +1,9 @@
+import Menu from "../common/Menu";
 const Inicio = () => {
   return (
-    <div>
-      <h2>Pagina Inicio
-      </h2>
-    </div>
+    <>
+      <Menu />
+    </>
   );
 };
 
