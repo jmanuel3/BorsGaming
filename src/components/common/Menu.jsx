@@ -15,9 +15,10 @@ const Menu = () => {
           />
         </Link>
         <Nav className="me-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
+          <Nav.Link href="#home">Inicio</Nav.Link>
+          <Nav.Link href="#features">Administrador</Nav.Link>
+          <Nav.Link href="#pricing">Acerca de nosotros</Nav.Link>
+          <Nav.Link href="#pricing">Login</Nav.Link>
         </Nav>
       </Container>
     </Navbar>
