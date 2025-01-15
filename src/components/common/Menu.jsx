@@ -14,7 +14,7 @@ const Menu = () => {
             width={150}
           />
         </Link>
-        <Nav className="me-auto">
+        <Nav className="me-5">
           <Nav.Link href="#home">Inicio</Nav.Link>
           <Nav.Link href="#features">Administrador</Nav.Link>
           <Nav.Link href="#pricing">Acerca de nosotros</Nav.Link>
