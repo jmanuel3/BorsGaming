@@ -1,0 +1,14 @@
+{
+  "productos":{
+    "nombreProducto": "Tekken",
+    "precio": 45,
+    "imagen": "",
+    "categoria": "Lucha",
+    "descripcion_breve": "Tekken es una saga de videojuegos de lucha desarrollada por Bandai Namco, conocida por su jugabilidad técnica, personajes icónicos y combates en 3D llenos de acción. La trama gira en torno al Torneo del Rey del Puño de Hierro, donde luchadores de diversas partes del mundo compiten, cada uno con estilos de combate únicos y motivaciones personales.",
+    "descripcion_amplia": "Tekken es una emblemática franquicia de videojuegos de lucha desarrollada y publicada por Bandai Namco Entertainment, cuya primera entrega debutó en 1994 para arcade y PlayStation. Desde entonces, la saga se ha consolidado como una de las más influyentes en su género, destacando por su enfoque técnico, innovador sistema de combate en 3D y una rica narrativa que conecta a sus personajes. El juego se centra en el Torneo del Rey del Puño de Hierro, un campeonato organizado por la familia Mishima, cuyo linaje está marcado por traiciones, venganzas y secretos oscuros. Los personajes participantes tienen estilos de combate inspirados en artes marciales reales, desde karate y taekwondo hasta capoeira y lucha libre, lo que añade profundidad y realismo al gameplay. Además, cada luchador tiene su propia historia, motivaciones y rivalidades, lo que enriquece la experiencia narrativa. A lo largo de sus entregas, Tekken ha evolucionado visualmente, incorporando gráficos avanzados, efectos espectaculares y escenarios interactivos que permiten una experiencia más inmersiva. También ha introducido mecánicas como los Rage Arts, ataques especiales que pueden cambiar el curso de una pelea, y combos más accesibles para equilibrar la curva de aprendizaje entre principiantes y jugadores experimentados. Con personajes icónicos como Jin Kazama, Kazuya Mishima, Heihachi Mishima, Paul Phoenix y King, Tekken se ha convertido en un fenómeno cultural, manteniendo una base de fans leal y una presencia constante en la escena competitiva de los eSports. Su combinación de estrategia, habilidad y profundidad narrativa lo ha establecido como una obra maestra en el género de los juegos de lucha.",
+    "requisitosSistema": "OS: Windows 10 64-Bit",
+    "desarrollador": "Bandai Namco Entertainment",
+    "reseñas": "",
+    "id": "a1234"
+  }
+}
