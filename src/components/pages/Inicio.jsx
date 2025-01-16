@@ -1,8 +1,8 @@
-import Menu from "../common/Menu";
-import Footer from "../common/Footer";
+import CardJuego from './Juego/CardJuego'
 const Inicio = () => {
   return (
     <>
+    <CardJuego></CardJuego>
     </>
   );
 };
