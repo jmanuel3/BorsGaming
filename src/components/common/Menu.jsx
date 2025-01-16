@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar, NavbarBrand } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router";
 import logo from "../../assets/borsLogo.png";
 const Menu = () => {
@@ -13,7 +13,7 @@ const Menu = () => {
             src={logo}
             alt="logo BorsGaming"
             className="img-fluid"
-            width={150}
+            width={90}
           />
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
