@@ -5,6 +5,7 @@ import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import Error404 from "./components/pages/Error404";
 import SobreNosotros from "./components/pages/SobreNosotros";
+import Login from "./components/pages/Login";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Inicio />} />
           <Route path="/administrador" element={<Administrador />} />
           <Route path="/sobrenosotros" element={<SobreNosotros />} />
+          <Route path="/login" element={<Login />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer></Footer>
