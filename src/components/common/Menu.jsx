@@ -13,16 +13,18 @@ const Menu = () => {
             src={logo}
             alt="logo BorsGaming"
             className="img-fluid"
-            width={90}
+            width={100}
           />
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto gap-3">
-            <Nav.Link href="#home">Inicio</Nav.Link>
-            <Nav.Link href="#features">Administrador</Nav.Link>
-            <Nav.Link href="#pricing">Acerca de nosotros</Nav.Link>
-            <Nav.Link href="#login">Login</Nav.Link>
+            <NavLink end className="nav-link" to="/">
+              Inicio
+            </NavLink>
+            <NavLink end className="nav-link" to="/administrador">Administrador</NavLink>
+            <NavLink end className="nav-link" to="/sobrenosotros">Acerca de nosotros</NavLink>
+            <NavLink end className="nav-link" to="/login">Login</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

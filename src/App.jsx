@@ -8,6 +8,7 @@ import SobreNosotros from "./components/pages/SobreNosotros";
 import Login from "./components/pages/Login";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import FormularioJuego from "./components/pages/Juego/FormularioJuego";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/administrador" element={<Administrador />} />
           <Route path="/sobrenosotros" element={<SobreNosotros />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/administrador-juego/crear" element={<FormularioJuego />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer></Footer>
