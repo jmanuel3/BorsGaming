@@ -17,6 +17,33 @@
       "descripcion_amplia": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffre",
       "imagen": "https://images.pexels.com/photos/4828339/pexels-photo-4828339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "id": "_fTRNwO"
+    },
+    {
+      "nombreProducto": "Battlelfield 46",
+      "precio": "100",
+      "categoria": "Aventuras",
+      "descripcion_breve": "kikilili",
+      "descripcion_amplia": "iuuuuuuuuuuuuuuuuuuuuuuuuuuu",
+      "imagen": "https://genesistoxical.com/wp-content/uploads/2020/07/Fantasma_png.png",
+      "id": "WnH-O1s"
+    },
+    {
+      "nombreProducto": "medialuna",
+      "precio": "25",
+      "categoria": "Terror",
+      "descripcion_breve": "popopo",
+      "descripcion_amplia": "iiiiiiiuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu",
+      "imagen": "https://genesistoxical.com/wp-content/uploads/2020/07/Fantasma_png.png",
+      "id": "rjAtaxd"
+    },
+    {
+      "nombreProducto": "medialuna",
+      "precio": "44",
+      "categoria": "Accion",
+      "descripcion_breve": "ppppppppppp",
+      "descripcion_amplia": "oooooooooooooooooooooooooooo",
+      "imagen": "https://genesistoxical.com/wp-content/uploads/2020/07/Fantasma_png.png",
+      "id": "MJBbVsK"
     }
   ]
 }

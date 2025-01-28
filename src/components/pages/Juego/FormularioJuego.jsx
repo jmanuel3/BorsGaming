@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { Button, Form, FormControl } from "react-bootstrap";
 import { crearJuegoAPI } from "../../helpers/queries";
+import Swal from "sweetalert2";
 FormControl;
 const FormularioJuego = () => {
   const {
@@ -13,6 +14,20 @@ const FormularioJuego = () => {
   const onSubmit = async (juego) => {
     console.log(juego);
     const respuesta = await crearJuegoAPI(juego);
+    if (respuesta.status === 201) {
+      Swal.fire({
+        title: "¡Bien hecho!",
+        text: "Has añadido un producto con éxito",
+        icon: "success",
+      });
+      reset();
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Uy...",
+        text: "Parece que ha ocurrido un error...",
+      });
+    }
   };
   return (
     <section className="container mainSection">
