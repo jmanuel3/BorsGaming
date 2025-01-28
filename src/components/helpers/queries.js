@@ -17,3 +17,15 @@ export const crearJuegoAPI = async (juegoNuevo) => {
     return false;
   }
 };
+
+
+export const listarJuegoAPI = async () => {
+  try {
+    const respuesta = await fetch("http://localhost:3000/productos");
+    console.log(respuesta);
+    return respuesta;
+  } catch (error) {
+    console.error(error);
+    return false;
+  }
+};
