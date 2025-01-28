@@ -1,5 +1,5 @@
 import { Table } from "react-bootstrap";
-import { PlusCircleFill } from "react-bootstrap-icons";
+import { PencilSquare, PlusCircleFill, Trash3 } from "react-bootstrap-icons";
 import { Link } from "react-router";
 
 const Administrador = () => {
@@ -7,7 +7,7 @@ const Administrador = () => {
     <section className="container mainSection">
       <div className="d-flex justify-content-between align-items-center mt-5">
         <h1 className="display-4 ">Nuestros juegos:</h1>
-        <Link className="btn btn-primary" to={"/administrador-juego/crear"}>
+        <Link className="btn btn-dark" to={"/administrador-juego/crear"}>
           <PlusCircleFill />
         </Link>
       </div>
@@ -23,6 +23,11 @@ const Administrador = () => {
             <th>Requisitos del sistema</th>
             <th>Desarrollador</th>
             <th>Reseñas</th>
+            <th>
+              Opciones:
+              <i className="btn btn-danger me-lg-2" />
+              <i className="btn btn-warning bi-pencil-square"></i>
+            </th>
           </tr>
         </thead>
         <tbody></tbody>

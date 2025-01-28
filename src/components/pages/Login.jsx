@@ -11,7 +11,7 @@ const Login = () => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Correo electrónico</Form.Label>
           <Form.Control
-            className="text-primary"
+            className="text-dark"
             type="email"
             placeholder="Ingrese su correo electrónico"
           />
@@ -20,23 +20,20 @@ const Login = () => {
           </Form.Text>
         </Form.Group>
 
-        {/* Campo de contraseña */}
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Contraseña</Form.Label>
           <Form.Control
             type="password"
             placeholder="Ingrese su contraseña"
             className="
-            text-light"
+            text-dark"
           />
         </Form.Group>
 
-        {/* Checkbox */}
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Recordar credenciales" />
         </Form.Group>
 
-        {/* Botón centrado */}
         <div className="d-flex justify-content-center">
           <Button variant="dark" type="submit" className="w-100">
             Enviar

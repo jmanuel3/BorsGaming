@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { Button, Form, FormControl } from "react-bootstrap";
+import { crearJuegoAPI } from "../../helpers/queries";
 FormControl;
 const FormularioJuego = () => {
   const {
@@ -8,10 +9,15 @@ const FormularioJuego = () => {
     formState: { errors },
     reset,
   } = useForm();
+
+  const onSubmit = async (juego) => {
+    console.log(juego);
+    const respuesta = await crearJuegoAPI(juego);
+  };
   return (
     <section className="container mainSection">
       <h1 className="display-2 mt-5">Administrar producto</h1>
-      <Form className="my-4">
+      <Form className="my-4" onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formNombreJuego">
           <Form.Label>Juego</Form.Label>
           <Form.Control
@@ -42,7 +48,7 @@ const FormularioJuego = () => {
             {...register("precio", {
               required: "El precio es un valor obligatorio",
               min: {
-                value: 50,
+                value: 1,
                 message: "Como mínimo, el precio debe superar $1",
               },
               max: {
@@ -64,7 +70,7 @@ const FormularioJuego = () => {
             })}
           >
             <option value="">Seleccione una opción</option>
-            <option value="Bélica">Bélica</option>
+            <option value="Bélico">Bélico</option>
             <option value="Deportes">Deportes</option>
             <option value="Accion">Acción</option>
             <option value="Aventuras">Aventuras</option>
