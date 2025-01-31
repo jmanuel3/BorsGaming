@@ -4,6 +4,9 @@
       "nombreProducto": "tucuman",
       "precio": "53",
       "categoria": "Accion",
+      "requisitosSistema": "WINDOWS 54",
+      "desarrollador": "Konami",
+      "reseñas": "",
       "descripcion_breve": "grgrgrgr",
       "descripcion_amplia": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
       "imagen": "https://e7.pngegg.com/pngimages/660/375/png-clipart-mario-mario.png",
@@ -44,6 +47,15 @@
       "descripcion_amplia": "oooooooooooooooooooooooooooo",
       "imagen": "https://genesistoxical.com/wp-content/uploads/2020/07/Fantasma_png.png",
       "id": "MJBbVsK"
+    },
+    {
+      "nombreProducto": "Battlelfield 46",
+      "precio": "45",
+      "categoria": "Bélico",
+      "descripcion_breve": "loooooooooo",
+      "descripcion_amplia": "lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll",
+      "imagen": "https://genesistoxical.com/wp-content/uploads/2020/07/Fantasma_png.png",
+      "id": "K9cTD4B"
     }
   ]
 }

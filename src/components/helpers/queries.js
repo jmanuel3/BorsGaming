@@ -18,10 +18,22 @@ export const crearJuegoAPI = async (juegoNuevo) => {
   }
 };
 
-
 export const listarJuegoAPI = async () => {
   try {
     const respuesta = await fetch("http://localhost:3000/productos");
+    console.log(respuesta);
+    return respuesta;
+  } catch (error) {
+    console.error(error);
+    return false;
+  }
+};
+
+export const borrarJuegoAPI = async (id) => {
+  try {
+    const respuesta = await fetch("http://localhost:3000/productos/" + id, {
+      method: "DELETE",
+    });
     console.log(respuesta);
     return respuesta;
   } catch (error) {

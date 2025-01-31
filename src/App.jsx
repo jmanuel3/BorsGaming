@@ -20,7 +20,10 @@ function App() {
           <Route path="/administrador" element={<Administrador />} />
           <Route path="/sobrenosotros" element={<SobreNosotros />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/administrador-juego/crear" element={<FormularioJuego />} />
+          <Route
+            path="/administrador-juego/crear"
+            element={<FormularioJuego />}
+          />
           <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer></Footer>
