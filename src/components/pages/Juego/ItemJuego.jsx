@@ -1,20 +1,29 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router";
 import { borrarJuegoAPI, listarJuegoAPI } from "../../helpers/queries";
+import Swal from "sweetalert2";
 
-const ItemJuego = ({ juego }) => {
+const ItemJuego = ({ juego, setListaJuegos }) => {
   const borrarJuego = async () => {
-    const respuesta = await borrarJuegoAPI(producto.id);
+    const respuesta = await borrarJuegoAPI(juego.id);
     if (respuesta.status === 200) {
-      const respuestaListaProductos = await listarJuegoAPI();
-      if (respuestaListaProductos.status === 200) {
+      const respuestaListaJuegos = await listarJuegoAPI();
+      if (respuestaListaJuegos.status === 200) {
         //actualizar la tabla
-        const datos = await respuestaListaProductos.json();
-        setListaProductos(datos);
+
+        const datos = await respuestaListaJuegos.json();
+        setListaJuegos(datos);
       }
-      alert("El producto fue eliminado correctamente.");
+      Swal.fire({
+              title: "¡Bien hecho!",
+              text: "Has borrado el juego con éxito",
+              icon: "success",})
     } else {
-      alert("Ocurrio un error, intente esta operación en unos minutos.");
+      Swal.fire({
+              icon: "error",
+              title: "Uy...",
+              text: "Parece que ha ocurrido un error...",
+            });
     }
   };
   return (
@@ -34,12 +43,13 @@ const ItemJuego = ({ juego }) => {
       <td>{juego.desarrollador}</td>
       <td>{juego.reseñas}</td>
       <td className="text-center">
-        <Link
-          className="btn btn-warning me-lg-2"
+        <Button
+          variant="warning"
+          className="me-lg-2"
           to={`/administrador/crear/${juego.id}`}
         >
           <i className="bi bi-pencil-square"></i>
-        </Link>
+        </Button>
         <Button variant="danger" onClick={borrarJuego}>
           <i className="bi bi-trash"></i>
         </Button>

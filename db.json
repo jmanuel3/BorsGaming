@@ -1,61 +1,22 @@
 {
   "productos": [
     {
-      "nombreProducto": "tucuman",
-      "precio": "53",
-      "categoria": "Accion",
-      "requisitosSistema": "WINDOWS 54",
-      "desarrollador": "Konami",
-      "reseñas": "",
-      "descripcion_breve": "grgrgrgr",
-      "descripcion_amplia": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
-      "imagen": "https://e7.pngegg.com/pngimages/660/375/png-clipart-mario-mario.png",
-      "id": "ab3"
-    },
-    {
-      "nombreProducto": "Battlelfield 46",
-      "precio": "99",
-      "categoria": "Bélico",
-      "descripcion_breve": "dererererere",
-      "descripcion_amplia": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffre",
-      "imagen": "https://images.pexels.com/photos/4828339/pexels-photo-4828339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "id": "_fTRNwO"
-    },
-    {
-      "nombreProducto": "Battlelfield 46",
-      "precio": "100",
-      "categoria": "Aventuras",
-      "descripcion_breve": "kikilili",
-      "descripcion_amplia": "iuuuuuuuuuuuuuuuuuuuuuuuuuuu",
-      "imagen": "https://genesistoxical.com/wp-content/uploads/2020/07/Fantasma_png.png",
-      "id": "WnH-O1s"
-    },
-    {
-      "nombreProducto": "medialuna",
-      "precio": "25",
+      "nombreProducto": "Hell let Loose",
+      "precio": "10",
       "categoria": "Terror",
-      "descripcion_breve": "popopo",
-      "descripcion_amplia": "iiiiiiiuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu",
-      "imagen": "https://genesistoxical.com/wp-content/uploads/2020/07/Fantasma_png.png",
-      "id": "rjAtaxd"
+      "descripcion_breve": "feeee",
+      "descripcion_amplia": "rrrrrrrrrrrrrrrrrrrrrrrre",
+      "imagen": "https://img.freepik.com/premium-psd/colorful-butterfly-realistic-isolated-transparent-background-png-file_1304044-3907.jpg?semt=ais_hybrid",
+      "id": 2
     },
     {
-      "nombreProducto": "medialuna",
-      "precio": "44",
-      "categoria": "Accion",
-      "descripcion_breve": "ppppppppppp",
-      "descripcion_amplia": "oooooooooooooooooooooooooooo",
-      "imagen": "https://genesistoxical.com/wp-content/uploads/2020/07/Fantasma_png.png",
-      "id": "MJBbVsK"
-    },
-    {
-      "nombreProducto": "Battlelfield 46",
-      "precio": "45",
-      "categoria": "Bélico",
-      "descripcion_breve": "loooooooooo",
-      "descripcion_amplia": "lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll",
-      "imagen": "https://genesistoxical.com/wp-content/uploads/2020/07/Fantasma_png.png",
-      "id": "K9cTD4B"
+      "nombreProducto": "fifa",
+      "precio": "14",
+      "categoria": "Estrategia",
+      "descripcion_breve": "teeee",
+      "descripcion_amplia": "rrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "imagen": "https://img.freepik.com/premium-psd/colorful-butterfly-realistic-isolated-transparent-background-png-file_1304044-3907.jpg?semt=ais_hybrid",
+      "id": 3
     }
   ]
 }

@@ -1,6 +1,7 @@
 //POST - Crear producto => 201
 //GET - Obtener producto/s => 200. En su función solo recibe un parámetro
-
+//DELETE - Borrar 1 producto
+// PUT o PATCH - Put edita todo el objeto. Patch edita solo una parte del objeto
 export const crearJuegoAPI = async (juegoNuevo) => {
   try {
     const respuesta = await fetch("http://localhost:3000/productos", {
