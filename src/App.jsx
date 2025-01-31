@@ -9,6 +9,7 @@ import Login from "./components/pages/Login";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FormularioJuego from "./components/pages/Juego/FormularioJuego";
+import ListaUsuarios from "./components/pages/Usuarios/ListaUsuarios";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             path="/administrador-juego/crear"
             element={<FormularioJuego />}
           />
+          <Route path="/administrador/usuarios" element={<ListaUsuarios />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer></Footer>

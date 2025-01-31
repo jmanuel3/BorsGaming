@@ -1,6 +1,7 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link, NavLink } from "react-router";
 import logo from "../../assets/borsLogo.png";
+
 const Menu = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary py-2">
@@ -22,9 +23,20 @@ const Menu = () => {
             <NavLink end className="nav-link" to="/">
               Inicio
             </NavLink>
-            <NavLink end className="nav-link" to="/administrador">Administrador</NavLink>
-            <NavLink end className="nav-link" to="/sobrenosotros">Acerca de nosotros</NavLink>
-            <NavLink end className="nav-link" to="/login">Login</NavLink>
+            <NavLink end className="nav-link" to="/sobrenosotros">
+              Acerca de nosotros
+            </NavLink>
+            <NavLink end className="nav-link" to="/login">
+              Login
+            </NavLink>
+            <NavDropdown title="Administrador" to="/administrador">
+              <NavLink className="nav-link" to="/administrador">
+                Gestionar juegos
+              </NavLink>
+              <NavLink className="nav-link" to="/administrador/usuarios">
+                Gestionar usuarios
+              </NavLink>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
