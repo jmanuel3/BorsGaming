@@ -17,6 +17,24 @@
       "descripcion_amplia": "rrrrrrrrrrrrrrrrrrrrrrrrrrrr",
       "imagen": "https://img.freepik.com/premium-psd/colorful-butterfly-realistic-isolated-transparent-background-png-file_1304044-3907.jpg?semt=ais_hybrid",
       "id": 3
+    },
+    {
+      "nombreProducto": "RAFT",
+      "precio": "5",
+      "categoria": "Aventuras",
+      "descripcion_breve": "YERTTTT",
+      "descripcion_amplia": "sssssssssssssssss",
+      "imagen": "https://img.freepik.com/premium-psd/colorful-butterfly-realistic-isolated-transparent-background-png-file_1304044-3907.jpg?semt=ais_hybrid",
+      "id": 4
+    },
+    {
+      "nombreProducto": "ffnienfinfiew",
+      "precio": "4",
+      "categoria": "Aventuras",
+      "descripcion_breve": "hhtttt",
+      "descripcion_amplia": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "imagen": "https://img.freepik.com/premium-psd/colorful-butterfly-realistic-isolated-transparent-background-png-file_1304044-3907.jpg?semt=ais_hybrid",
+      "id": 5
     }
   ]
 }
