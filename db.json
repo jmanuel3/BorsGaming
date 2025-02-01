@@ -1,15 +1,6 @@
 {
   "productos": [
     {
-      "nombreProducto": "Hell let Loose",
-      "precio": "10",
-      "categoria": "Terror",
-      "descripcion_breve": "feeee",
-      "descripcion_amplia": "rrrrrrrrrrrrrrrrrrrrrrrre",
-      "imagen": "https://img.freepik.com/premium-psd/colorful-butterfly-realistic-isolated-transparent-background-png-file_1304044-3907.jpg?semt=ais_hybrid",
-      "id": 2
-    },
-    {
       "nombreProducto": "fifa",
       "precio": "14",
       "categoria": "Estrategia",
@@ -35,6 +26,15 @@
       "descripcion_amplia": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
       "imagen": "https://img.freepik.com/premium-psd/colorful-butterfly-realistic-isolated-transparent-background-png-file_1304044-3907.jpg?semt=ais_hybrid",
       "id": 5
+    },
+    {
+      "nombreProducto": "medialuna",
+      "precio": "12",
+      "categoria": "Terror",
+      "descripcion_breve": "eeeeeee",
+      "descripcion_amplia": "reeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "imagen": "https://www.adobe.com/au/creativecloud/file-types/image/raster/media_190563911f4a579a9d6f1f9d5b499b44d6413088b.jpeg?width=1200&format=pjpg&optimize=medium",
+      "id": 6
     }
   ]
 }

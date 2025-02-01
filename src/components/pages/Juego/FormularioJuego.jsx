@@ -3,7 +3,7 @@ import { Button, Form, FormControl } from "react-bootstrap";
 import { crearJuegoAPI } from "../../helpers/queries";
 import Swal from "sweetalert2";
 FormControl;
-const FormularioJuego = () => {
+const FormularioJuego = ({ crearJuego }) => {
   const {
     register,
     handleSubmit,
@@ -12,21 +12,25 @@ const FormularioJuego = () => {
   } = useForm();
 
   const onSubmit = async (juego) => {
-    console.log(juego);
-    const respuesta = await crearJuegoAPI(juego);
-    if (respuesta.status === 201) {
-      Swal.fire({
-        title: "¡Bien hecho!",
-        text: "Has añadido un producto con éxito",
-        icon: "success",
-      });
-      reset();
+    if (crearJuego === true) {
+      console.log(juego);
+      const respuesta = await crearJuegoAPI(juego);
+      if (respuesta.status === 201) {
+        Swal.fire({
+          title: "¡Bien hecho!",
+          text: "Has añadido un producto con éxito",
+          icon: "success",
+        });
+        reset();
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Uy...",
+          text: "Parece que ha ocurrido un error...",
+        });
+      }
     } else {
-      Swal.fire({
-        icon: "error",
-        title: "Uy...",
-        text: "Parece que ha ocurrido un error...",
-      });
+      console.log("Editar aquí");
     }
   };
   return (

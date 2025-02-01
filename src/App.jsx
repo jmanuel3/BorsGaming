@@ -18,13 +18,19 @@ function App() {
         <Menu></Menu>
         <Routes>
           <Route path="/" element={<Inicio />} />
-          <Route path="/administrador" element={<Administrador />} />
+          
           <Route path="/sobrenosotros" element={<SobreNosotros />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/administrador" element={<Administrador />} />
           <Route
             path="/administrador-juego/crear"
-            element={<FormularioJuego />}
+            element={<FormularioJuego crearJuego={true} />}
           />
+          <Route
+            path="/administrador-juego/editar"
+            element={<FormularioJuego crearJuego={false} />}
+          />
+          
           <Route path="/administrador/usuarios" element={<ListaUsuarios />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
