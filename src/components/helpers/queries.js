@@ -42,3 +42,21 @@ export const borrarJuegoAPI = async (id) => {
     return false;
   }
 };
+
+//usuario administrador
+const adminUsuario = {
+  email: "admin@borsgaming.com",
+  password: "12345678",
+};
+
+export const login = (usuario) => {
+  if (
+    usuario.email === adminUsuario.email &&
+    usuario.password === adminUsuario.password
+  ) {
+    localStorage.setItem('userKey', JSON.stringify(adminUsuario.email))
+    return true;
+  } else {
+    return false;
+  }
+};

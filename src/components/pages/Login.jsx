@@ -7,7 +7,6 @@ const Login = () => {
         className="p-4 rounded bg-secondary w-100"
         style={{ maxWidth: "400px" }}
       >
-        {/* Campo de correo */}
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Correo electrónico</Form.Label>
           <Form.Control
