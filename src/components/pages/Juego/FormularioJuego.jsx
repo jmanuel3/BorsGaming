@@ -1,15 +1,44 @@
 import { useForm } from "react-hook-form";
 import { Button, Form, FormControl } from "react-bootstrap";
-import { crearJuegoAPI } from "../../helpers/queries";
+import {
+  crearJuegoAPI,
+  editarJuegoAPI,
+  obtenerJuegoAPI,
+} from "../../helpers/queries";
 import Swal from "sweetalert2";
-FormControl;
+import { useNavigate, useParams } from "react-router";
+import { useEffect } from "react";
+
 const FormularioJuego = ({ crearJuego }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
+    setValue,
   } = useForm();
+  const { id } = useParams();
+  const navegacion = useNavigate();
+
+  useEffect(() => {
+    if (crearJuego === false) {
+      cargarJuego();
+    }
+  }, []);
+
+  const cargarJuego = async () => {
+    const respuesta = await obtenerJuegoAPI(id);
+    if (respuesta.status === 200) {
+      const datos = await respuesta.json();
+      console.log(datos);
+      setValue("nombreProducto", datos.nombreProducto);
+      setValue("precio", datos.precio);
+      setValue("precio", datos.categoria);
+      setValue("precio", datos.descripcion_breve);
+      setValue("precio", datos.descripcion_amplia);
+      setValue("precio", datos.imagen);
+    }
+  };
 
   const onSubmit = async (juego) => {
     if (crearJuego === true) {
@@ -30,7 +59,22 @@ const FormularioJuego = ({ crearJuego }) => {
         });
       }
     } else {
-      console.log("Editar aquí");
+      const respuesta = await editarJuegoAPI(juego, id);
+      if (respuesta.status === 200) {
+        Swal.fire({
+          title: "¡Bien hecho!",
+          text: "El juego se ha actualizado con éxito",
+          icon: "success",
+        });
+        //redireccionar
+        navegacion("/administrador");
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Uy...",
+          text: "Parece que ha ocurrido un error...",
+        });
+      }
     }
   };
   return (

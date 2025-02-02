@@ -2,11 +2,11 @@
   "productos": [
     {
       "nombreProducto": "fifa",
-      "precio": "14",
-      "categoria": "Estrategia",
-      "descripcion_breve": "teeee",
-      "descripcion_amplia": "rrrrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "imagen": "https://img.freepik.com/premium-psd/colorful-butterfly-realistic-isolated-transparent-background-png-file_1304044-3907.jpg?semt=ais_hybrid",
+      "precio": "66",
+      "categoria": "Deportes",
+      "descripcion_breve": "feeeeeeeeeeeeeee",
+      "descripcion_amplia": "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
+      "imagen": "https://images.pexels.com/photos/5965023/pexels-photo-5965023.jpeg?auto=compress&cs=tinysrgb&w=400",
       "id": 3
     },
     {

@@ -18,7 +18,7 @@ function App() {
         <Menu></Menu>
         <Routes>
           <Route path="/" element={<Inicio />} />
-          
+
           <Route path="/sobrenosotros" element={<SobreNosotros />} />
           <Route path="/login" element={<Login />} />
           <Route path="/administrador" element={<Administrador />} />
@@ -27,10 +27,10 @@ function App() {
             element={<FormularioJuego crearJuego={true} />}
           />
           <Route
-            path="/administrador-juego/editar"
+            path="/administrador-juego/editar/:id"
             element={<FormularioJuego crearJuego={false} />}
           />
-          
+
           <Route path="/administrador/usuarios" element={<ListaUsuarios />} />
           <Route path="*" element={<Error404 />} />
         </Routes>

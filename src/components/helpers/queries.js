@@ -29,11 +29,41 @@ export const listarJuegoAPI = async () => {
     return false;
   }
 };
+//**//
 
+export const obtenerJuegoAPI = async (id) => {
+  try {
+    const respuesta = await fetch("http://localhost:3000/productos/" + id);
+    console.log(respuesta);
+    return respuesta;
+  } catch (error) {
+    console.error(error);
+    return false;
+  }
+};
+
+//**//
 export const borrarJuegoAPI = async (id) => {
   try {
     const respuesta = await fetch("http://localhost:3000/productos/" + id, {
       method: "DELETE",
+    });
+    console.log(respuesta);
+    return respuesta;
+  } catch (error) {
+    console.error(error);
+    return false;
+  }
+};
+
+export const editarJuegoAPI = async (juegoEditado, id) => {
+  try {
+    const respuesta = await fetch("http://localhost:3000/productos/" + id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(juegoEditado),
     });
     console.log(respuesta);
     return respuesta;

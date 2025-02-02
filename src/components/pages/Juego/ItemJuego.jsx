@@ -37,7 +37,7 @@ const ItemJuego = ({ juego }) => {
       <td className="text-center">
         <Link
           className="btn btn-warning me-lg-2"
-          to={`/administrador-juego/editar`}
+          to={`/administrador-juego/editar/${juego.id}`}
         >
           <PencilSquare />
         </Link>
