@@ -10,17 +10,27 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FormularioJuego from "./components/pages/Juego/FormularioJuego";
 import ListaUsuarios from "./components/pages/Usuarios/ListaUsuarios";
+import { useState } from "react";
 
 function App() {
+  const usuario = JSON.parse(localStorage.getItem("userKey")) || "";
+  const [usuarioLogueado, setUsuarioLogueado] = useState(usuario);
+
   return (
     <>
       <BrowserRouter>
-        <Menu></Menu>
+        <Menu
+          usuarioLogueado={usuarioLogueado}
+          setUsuarioLogueado={setUsuarioLogueado}
+        ></Menu>
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/administrador" element={<Administrador />} />
           <Route path="/sobrenosotros" element={<SobreNosotros />} />
-          <Route path="/login" element={<Login />} />
+          <Route
+            path="/login"
+            element={<Login setUsuarioLogueado={setUsuarioLogueado} />}
+          />
           <Route
             path="/administrador-juego/crear"
             element={<FormularioJuego />}

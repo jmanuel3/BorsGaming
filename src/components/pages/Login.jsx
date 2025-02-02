@@ -1,44 +1,109 @@
-import { Button, Form } from "react-bootstrap";
+import { Button, Card, CardBody, Container, Form, Row } from "react-bootstrap";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router";
+import { login } from "../helpers/queries";
+import Swal from "sweetalert2";
 
-const Login = () => {
+const Login = ({ setUsuarioLogueado }) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const navegacion = useNavigate();
+
+  const onSubmit = (usuario) => {
+    if (login(usuario)) {
+      setUsuarioLogueado(usuario);
+      Swal.fire({
+        title: "Bienvenido gamer!",
+        text: "A disfrutar de la forma más barata.",
+        imageUrl:
+          "https://images.pexels.com/photos/1293261/pexels-photo-1293261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Custom image",
+      });
+      navegacion("/administrador");
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "El email o la contraseña son incorrectos",
+      });
+    }
+  };
+
   return (
-    <section className="d-flex justify-content-center align-items-center vh-100 text-light">
-      <Form
-        className="p-4 rounded bg-secondary w-100"
-        style={{ maxWidth: "400px" }}
-      >
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Correo electrónico</Form.Label>
-          <Form.Control
-            className="text-dark"
-            type="email"
-            placeholder="Ingrese su correo electrónico"
-          />
-          <Form.Text className="text-light">
-            Nunca compartiremos tu dirección de correo electrónico con terceros.
-          </Form.Text>
-        </Form.Group>
+    <section className="mainSection align-content-center">
+      <Container className="w-80">
+        <Row className="justify-content-center">
+          <Card>
+            <CardBody>
+              <div className="justify-content-center d-flex">
+                <Card.Title>Login</Card.Title>
+              </div>
+              <Form onSubmit={handleSubmit(onSubmit)}>
+                <Form.Group className="mb-3" controlId="formGroupEmail">
+                  <Form.Label>Correo electrónico</Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="juegos@baratisimos.com"
+                    {...register("email", {
+                      required: "El email es obligatorio",
+                      minLength: {
+                        value: 11,
+                        message: "Debe ingresar como mínimo 11 caracteres",
+                      },
+                      maxLength: {
+                        value: 50,
+                        message: "Debe ingresar como máximo 50 caracteres",
+                      },
+                    })}
+                  />
+                  <Form.Text className="text-danger">
+                    {errors.email?.message}
+                  </Form.Text>
+                </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Contraseña</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Ingrese su contraseña"
-            className="
-            text-dark"
-          />
-        </Form.Group>
+                <Form.Group className="mb-4" controlId="formGroupPassword">
+                  <Form.Label>Contraseña</Form.Label>
+                  <Form.Control
+                    type="password"
+                    placeholder="Quierojuegosbaratos1"
+                    {...register("password", {
+                      required: "La contraseña es un campo obligatorio",
+                      minLength: {
+                        value: 8,
+                        message: "Debe ingresar como minimo 8 caracteres",
+                      },
+                      maxLength: {
+                        value: 20,
+                        message: "Debe ingresar como maximo 20 caracteres",
+                      },
+                    })}
+                  />
+                  <Form.Text className="text-danger">
+                    {errors.password?.message}
+                  </Form.Text>
+                </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Recordar credenciales" />
-        </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                  <Form.Check type="checkbox" label="Recordar credenciales" />
+                </Form.Group>
 
-        <div className="d-flex justify-content-center">
-          <Button variant="dark" type="submit" className="w-100">
-            Enviar
-          </Button>
-        </div>
-      </Form>
+                <div className=" justify-content-center">
+                  <Button variant="dark" type="submit">
+                    Enviar
+                  </Button>
+                </div>
+              </Form>
+            </CardBody>
+          </Card>
+        </Row>
+      </Container>
     </section>
   );
 };
