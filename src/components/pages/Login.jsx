@@ -38,7 +38,7 @@ const Login = ({ setUsuarioLogueado }) => {
 
   return (
     <section className="mainSection align-content-center">
-      <Container className="w-80">
+      <Container className="w-70">
         <Row className="justify-content-center">
           <Card>
             <CardBody>
