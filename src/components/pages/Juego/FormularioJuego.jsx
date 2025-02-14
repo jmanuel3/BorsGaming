@@ -1,32 +1,83 @@
 import { useForm } from "react-hook-form";
 import { Button, Form, FormControl } from "react-bootstrap";
-import { crearJuegoAPI } from "../../helpers/queries";
+import {
+  crearJuegoAPI,
+  editarJuegoAPI,
+  obtenerJuegoAPI,
+} from "../../helpers/queries";
 import Swal from "sweetalert2";
-FormControl;
-const FormularioJuego = () => {
+import { useNavigate, useParams } from "react-router";
+import { useEffect } from "react";
+
+const FormularioJuego = ({ crearJuego }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
+    setValue,
   } = useForm();
+  const { id } = useParams();
+  console.log("ID del juego recibido:", id);
+  const navegacion = useNavigate();
+
+  useEffect(() => {
+    if (crearJuego === false) {
+      cargarJuego();
+    }
+  }, []);
+
+  const cargarJuego = async () => {
+    //pedir a la api un producto
+    const respuesta = await obtenerJuegoAPI(id);
+    if (respuesta.status === 200) {
+      //dibujar el producto en el form
+      const datos = await respuesta.json();
+      console.log(datos);
+      setValue("nombreProducto", datos.nombreProducto);
+      setValue("precio", datos.precio);
+      setValue("imagen", datos.imagen);
+      setValue("categoria", datos.categoria);
+      setValue("requisitos_sistema", datos.requisitosSistema);
+      setValue("desarrollador", datos.desarrollador);
+      setValue("reseñas", datos.reseñas);
+    }
+  };
 
   const onSubmit = async (juego) => {
-    console.log(juego);
-    const respuesta = await crearJuegoAPI(juego);
-    if (respuesta.status === 201) {
-      Swal.fire({
-        title: "¡Bien hecho!",
-        text: "Has añadido un producto con éxito",
-        icon: "success",
-      });
-      reset();
+    if (crearJuego) {
+      console.log(juego);
+      const respuesta = await crearJuegoAPI(juego);
+      if (respuesta.status === 201) {
+        Swal.fire({
+          title: "¡Bien hecho!",
+          text: "Has añadido un producto con éxito",
+          icon: "success",
+        });
+        reset();
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Uy...",
+          text: "Parece que ha ocurrido un error...",
+        });
+      }
     } else {
-      Swal.fire({
-        icon: "error",
-        title: "Uy...",
-        text: "Parece que ha ocurrido un error...",
-      });
+      const respuesta = await editarJuegoAPI(juego, id);
+      if (respuesta.status === 200) {
+        Swal.fire({
+          title: "¡Bien hecho!",
+          text: "Has editado el juego con éxito",
+          icon: "success",
+        });
+        navegacion("/administrador-juego/crear");
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Uy...",
+          text: "Parece que ha ocurrido un error...",
+        });
+      }
     }
   };
   return (
@@ -96,53 +147,51 @@ const FormularioJuego = () => {
             {errors.categoria?.message}
           </Form.Text>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formDescripcionBreve">
-          <Form.Label>Descripción breve</Form.Label>
+        <Form.Group className="mb-3" controlId="formRequisitosSistema">
+          <Form.Label>Requisitos del sistema</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Por ejemplo: Videojuego de acción ambientado en el año 2609..."
+            placeholder="Por ejemplo: NVIDIA GEFORCE RTX..."
             as="textarea"
-            {...register("descripcion_breve", {
-              required: "La descripcion breve es ogligatoria",
+            {...register("requisitos_sistema", {
+              required: "Este campo es obligatorio",
               minLength: {
-                value: 5,
+                value: 2,
                 message:
-                  "Debe ingresar como minimo una descripcion de 5 caracteres",
+                  "Debe ingresar como minimo una descripcion de 2 caracteres",
               },
               maxLength: {
                 value: 50,
-                message:
-                  "Debe ingresar como maximo una descripcion de 50 caracteres",
+                message: "Debe ingresar como maximo 50 caracteres",
               },
             })}
           />
           <Form.Text className="text-danger">
-            {errors.descripcion_breve?.message}
+            {errors.requisitos_sistema?.message}
           </Form.Text>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formDescripcionAmplia">
-          <Form.Label>Descripción Amplia*</Form.Label>
+        <Form.Group className="mb-3" controlId="formDesarrollador">
+          <Form.Label>Desarrollador</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Por ejemplo: Chronos Reborn es un videojuego de rol y acción en mundo abierto que combina una narrativa profunda con mecánicas innovadoras. Ambientado en un universo steampunk postapocalíptico, los jugadores asumen el papel de un exiliado que debe manipular el tiempo para restaurar la civilización. El juego ofrece una experiencia inmersiva con paisajes detallados, desde ciudades flotantes hasta desiertos mecanizados, habitados por criaturas creadas con una mezcla de biología y tecnología. Con un sistema de combate dinámico que mezcla habilidades temporales, armas personalizables y tácticas estratégicas, Chronos Reborn permite a los jugadores tomar decisiones que afectan la historia y el mundo que los rodea. Su estilo artístico, inspirado en la ilustración victoriana, y su banda sonora épica orquestal complementan la experiencia, convirtiéndolo en una aventura inolvidable para los amantes de la fantasía y la ciencia ficción.  "
+            placeholder="Por ejemplo: EA Sports  "
             as="textarea"
-            {...register("descripcion_amplia", {
-              required: "La descripcion amplia es ogligatoria",
+            {...register("Desarrollador", {
+              required: "Este campo es oblligatorio",
               minLength: {
-                value: 10,
+                value: 2,
                 message:
-                  "Debe ingresar como minimo una descripcion de 10 caracteres",
+                  "Debe ingresar como minimo una descripcion de 2 caracteres",
               },
               maxLength: {
-                value: 250,
-                message:
-                  "Debe ingresar como maximo una descripcion de 250 caracteres",
+                value: 50,
+                message: "Debe ingresar como maximo 50 caracteres",
               },
             })}
           />
           <Form.Text className="text-danger">
-            {errors.descripcion_amplia?.message}
+            {errors.desarrollador?.message}
           </Form.Text>
         </Form.Group>
 
@@ -161,6 +210,20 @@ const FormularioJuego = () => {
           ></FormControl>
           <Form.Text className="text-danger">
             {errors.imagen?.message}
+          </Form.Text>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formReseñas">
+          <Form.Label> Reseñas</Form.Label>
+          <FormControl
+            type="number"
+            placeholder="0-5"
+            {...register("reseñas", {
+              required: "Debes añadir un número",
+            })}
+          ></FormControl>
+          <Form.Text className="text-danger">
+            {errors.reseñas?.message}
           </Form.Text>
         </Form.Group>
         <Button variant="primary" type="submit">

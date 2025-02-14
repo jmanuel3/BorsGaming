@@ -1,39 +1,14 @@
 {
   "productos": [
     {
-      "nombreProducto": "Hell let Loose",
-      "precio": "10",
-      "categoria": "Terror",
-      "descripcion_breve": "feeee",
-      "descripcion_amplia": "rrrrrrrrrrrrrrrrrrrrrrrre",
-      "imagen": "https://img.freepik.com/premium-psd/colorful-butterfly-realistic-isolated-transparent-background-png-file_1304044-3907.jpg?semt=ais_hybrid",
-      "id": 2
-    },
-    {
-      "nombreProducto": "fifa",
-      "precio": "14",
-      "categoria": "Estrategia",
-      "descripcion_breve": "teeee",
-      "descripcion_amplia": "rrrrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "imagen": "https://img.freepik.com/premium-psd/colorful-butterfly-realistic-isolated-transparent-background-png-file_1304044-3907.jpg?semt=ais_hybrid",
-      "id": 3
-    },
-    {
-      "nombreProducto": "RAFT",
-      "precio": "5",
+      "nombreProducto": "God of War",
+      "precio": "90",
       "categoria": "Aventuras",
-      "descripcion_breve": "YERTTTT",
-      "descripcion_amplia": "sssssssssssssssss",
+      "requisitos_sistema": "INTEL 7",
+      "Desarrollador": "vENUM",
       "imagen": "https://img.freepik.com/premium-psd/colorful-butterfly-realistic-isolated-transparent-background-png-file_1304044-3907.jpg?semt=ais_hybrid",
-      "id": 4
-    },
-    {
-      "nombreProducto": "ffnienfinfiew",
-      "precio": "4",
-      "categoria": "Aventuras",
-      "descripcion_breve": "hhtttt",
-      "descripcion_amplia": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
-      "imagen": "https://img.freepik.com/premium-psd/colorful-butterfly-realistic-isolated-transparent-background-png-file_1304044-3907.jpg?semt=ais_hybrid",
+      "reseñas": 4,
+      "desarrollador": "cAPCOM",
       "id": 5
     }
   ]

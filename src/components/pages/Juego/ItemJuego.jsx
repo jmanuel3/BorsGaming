@@ -15,15 +15,16 @@ const ItemJuego = ({ juego, setListaJuegos }) => {
         setListaJuegos(datos);
       }
       Swal.fire({
-              title: "¡Bien hecho!",
-              text: "Has borrado el juego con éxito",
-              icon: "success",})
+        title: "¡Bien hecho!",
+        text: "Has borrado el juego con éxito",
+        icon: "success",
+      });
     } else {
       Swal.fire({
-              icon: "error",
-              title: "Uy...",
-              text: "Parece que ha ocurrido un error...",
-            });
+        icon: "error",
+        title: "Uy...",
+        text: "Parece que ha ocurrido un error...",
+      });
     }
   };
   return (
@@ -43,13 +44,12 @@ const ItemJuego = ({ juego, setListaJuegos }) => {
       <td>{juego.desarrollador}</td>
       <td>{juego.reseñas}</td>
       <td className="text-center">
-        <Button
-          variant="warning"
-          className="me-lg-2"
-          to={`/administrador/crear/${juego.id}`}
+        <Link
+          className="btn btn-warning me-lg-2"
+          to={`/administrador-juego/editar/${juego.id}`}
         >
           <i className="bi bi-pencil-square"></i>
-        </Button>
+        </Link>
         <Button variant="danger" onClick={borrarJuego}>
           <i className="bi bi-trash"></i>
         </Button>
