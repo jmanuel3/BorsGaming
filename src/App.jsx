@@ -33,11 +33,11 @@ function App() {
           />
           <Route
             path="/administrador-juego/crear"
-            element={<FormularioJuego />}
+            element={<FormularioJuego crearJuego={true}/>}
           />
           <Route
             path="/administrador-juego/editar/:id"
-            element={<FormularioJuego crearJuego={false} />}
+            element={<FormularioJuego  />}
           />
           <Route path="/administrador/usuarios" element={<ListaUsuarios />} />
           <Route path="*" element={<Error404 />} />
