@@ -44,6 +44,24 @@
       "descripcion_amplia": "oooooooooooooooooooooooooooo",
       "imagen": "https://genesistoxical.com/wp-content/uploads/2020/07/Fantasma_png.png",
       "id": "MJBbVsK"
+    },
+    {
+      "nombreProducto": "Hell let Loose",
+      "precio": "54",
+      "categoria": "Bélico",
+      "descripcion_breve": "demoo",
+      "descripcion_amplia": "nonojojojojo",
+      "imagen": "https://img.freepik.com/premium-psd/colorful-butterfly-realistic-isolated-transparent-background-png-file_1304044-3907.jpg?semt=ais_hybrid",
+      "id": "wkoprUm"
+    },
+    {
+      "nombreProducto": "Battlelfield 46",
+      "precio": "22",
+      "categoria": "Bélico",
+      "descripcion_breve": "grgege",
+      "descripcion_amplia": "geeeeeeeeeeeeeeee",
+      "imagen": "https://images.pexels.com/photos/4828339/pexels-photo-4828339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": "WNms2w7"
     }
   ]
 }
