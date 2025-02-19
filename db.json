@@ -1,67 +1,65 @@
 {
   "productos": [
     {
-      "nombreProducto": "tucuman",
-      "precio": "53",
-      "categoria": "Accion",
-      "descripcion_breve": "grgrgrgr",
-      "descripcion_amplia": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
-      "imagen": "https://e7.pngegg.com/pngimages/660/375/png-clipart-mario-mario.png",
-      "id": "ab3"
-    },
-    {
-      "nombreProducto": "Battlelfield 46",
-      "precio": "99",
-      "categoria": "Bélico",
-      "descripcion_breve": "dererererere",
-      "descripcion_amplia": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffre",
-      "imagen": "https://images.pexels.com/photos/4828339/pexels-photo-4828339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "id": "_fTRNwO"
-    },
-    {
-      "nombreProducto": "Battlelfield 46",
-      "precio": "100",
+      "nombreProducto": "God of War",
+      "precio": "90",
       "categoria": "Aventuras",
-      "descripcion_breve": "kikilili",
-      "descripcion_amplia": "iuuuuuuuuuuuuuuuuuuuuuuuuuuu",
-      "imagen": "https://genesistoxical.com/wp-content/uploads/2020/07/Fantasma_png.png",
-      "id": "WnH-O1s"
+      "requisitos_sistema": "tereeeee",
+      "Desarrollador": "ferete",
+      "imagen": "https://img.freepik.com/premium-psd/colorful-butterfly-realistic-isolated-transparent-background-png-file_1304044-3907.jpg?semt=ais_hybrid",
+      "reseñas": 4,
+      "desarrollador": "cAPCOM",
+      "id": 5
     },
     {
-      "nombreProducto": "medialuna",
-      "precio": "25",
-      "categoria": "Terror",
-      "descripcion_breve": "popopo",
-      "descripcion_amplia": "iiiiiiiuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu",
-      "imagen": "https://genesistoxical.com/wp-content/uploads/2020/07/Fantasma_png.png",
-      "id": "rjAtaxd"
+      "nombreProducto": "Battlelfield 46",
+      "precio": "55",
+      "categoria": "Aventuras",
+      "requisitos_sistema": "oooooooooooooooo",
+      "Desarrollador": "ppppppppppp",
+      "imagen": "https://images.pexels.com/photos/4828339/pexels-photo-4828339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "reseñas": "4",
+      "id": 6
     },
     {
-      "nombreProducto": "medialuna",
+      "nombreProducto": "For Honor",
       "precio": "44",
-      "categoria": "Accion",
-      "descripcion_breve": "ppppppppppp",
-      "descripcion_amplia": "oooooooooooooooooooooooooooo",
-      "imagen": "https://genesistoxical.com/wp-content/uploads/2020/07/Fantasma_png.png",
-      "id": "MJBbVsK"
+      "categoria": "Estrategia",
+      "requisitos_sistema": "fefefe",
+      "Desarrollador": "ewwwwwwwwww",
+      "imagen": "https://images.pexels.com/photos/4828339/pexels-photo-4828339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "reseñas": "5",
+      "id": 7
+    },
+    {
+      "nombreProducto": "FIFA",
+      "precio": "14",
+      "categoria": "Deportes",
+      "requisitos_sistema": "reteeer",
+      "Desarrollador": "yyyyrtr",
+      "imagen": "https://assetsio.gnwcdn.com/battlefield-2042-portal-6-caspian-border.png?width=1200&height=630&fit=crop&enable=upscale&auto=webp",
+      "reseñas": "5",
+      "id": 8
+    },
+    {
+      "nombreProducto": "Sea of Thieves",
+      "precio": "80",
+      "categoria": "Aventuras",
+      "requisitos_sistema": "lokki",
+      "Desarrollador": "GERRT",
+      "imagen": "https://images.pexels.com/photos/4828339/pexels-photo-4828339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "reseñas": "3",
+      "id": 9
     },
     {
       "nombreProducto": "Hell let Loose",
-      "precio": "54",
-      "categoria": "Bélico",
-      "descripcion_breve": "demoo",
-      "descripcion_amplia": "nonojojojojo",
-      "imagen": "https://img.freepik.com/premium-psd/colorful-butterfly-realistic-isolated-transparent-background-png-file_1304044-3907.jpg?semt=ais_hybrid",
-      "id": "wkoprUm"
-    },
-    {
-      "nombreProducto": "Battlelfield 46",
-      "precio": "22",
-      "categoria": "Bélico",
-      "descripcion_breve": "grgege",
-      "descripcion_amplia": "geeeeeeeeeeeeeeee",
+      "precio": "44",
+      "categoria": "Terror",
+      "requisitos_sistema": "gerete",
+      "Desarrollador": "ggggggggggggggg",
       "imagen": "https://images.pexels.com/photos/4828339/pexels-photo-4828339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "id": "WNms2w7"
+      "reseñas": "1",
+      "id": 10
     }
   ]
 }

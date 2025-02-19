@@ -1,8 +1,29 @@
+import { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { PencilSquare, PlusCircleFill, Trash3 } from "react-bootstrap-icons";
 import { Link } from "react-router";
-
+import { listarJuegoAPI } from "../helpers/queries";
+import ItemJuego from "../pages/Juego/ItemJuego";
 const Administrador = () => {
+  const [listaJuegos, setListaJuegos] = useState([]);
+
+  useEffect(() => {
+    consultarAPI();
+  }, []);
+
+  const consultarAPI = async () => {
+    const respuesta = await listarJuegoAPI();
+    if (respuesta.status === 200) {
+      const datos = await respuesta.json();
+      setListaJuegos(datos);
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Uy...",
+        text: "Parece que ha ocurrido un error...",
+      });
+    }
+  };
   return (
     <section className="container mainSection">
       <div className="d-flex justify-content-between align-items-center mt-5">
@@ -23,14 +44,18 @@ const Administrador = () => {
             <th>Requisitos del sistema</th>
             <th>Desarrollador</th>
             <th>Reseñas</th>
-            <th>
-              Opciones:
-              <i className="btn btn-danger me-lg-2" />
-              <i className="btn btn-warning bi-pencil-square"></i>
-            </th>
+            <th>Opciones:</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+          {listaJuegos.map((juego) => (
+            <ItemJuego
+              key={juego.id}
+              juego={juego}
+              setListaJuegos={setListaJuegos}
+            ></ItemJuego>
+          ))}
+        </tbody>
       </Table>
     </section>
   );

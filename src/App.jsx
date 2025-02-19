@@ -9,18 +9,40 @@ import Login from "./components/pages/Login";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FormularioJuego from "./components/pages/Juego/FormularioJuego";
+import ListaUsuarios from "./components/pages/Usuarios/ListaUsuarios";
+import { useState } from "react";
 
 function App() {
+  const usuario = JSON.parse(localStorage.getItem("userKey")) || "";
+  const [usuarioLogueado, setUsuarioLogueado] = useState(usuario);
+
   return (
     <>
       <BrowserRouter>
-        <Menu></Menu>
+        <Menu
+          usuarioLogueado={usuarioLogueado}
+          setUsuarioLogueado={setUsuarioLogueado}
+        ></Menu>
         <Routes>
           <Route path="/" element={<Inicio />} />
-          <Route path="/administrador" element={<Administrador />} />
+          <Route
+            path="/administrador"
+            element={<Administrador setUsuarioLogueado={setUsuarioLogueado} />}
+          />
           <Route path="/sobrenosotros" element={<SobreNosotros />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/administrador-juego/crear" element={<FormularioJuego />} />
+          <Route
+            path="/login"
+            element={<Login setUsuarioLogueado={setUsuarioLogueado} />}
+          />
+          <Route
+            path="/administrador-juego/crear"
+            element={<FormularioJuego crearJuego={true} />}
+          />
+          <Route
+            path="/administrador-juego/editar/:id"
+            element={<FormularioJuego crearJuego={false} />}
+          />
+          <Route path="/administrador/usuarios" element={<ListaUsuarios />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer></Footer>
