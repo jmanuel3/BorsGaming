@@ -55,6 +55,7 @@ const FormularioJuego = ({ crearJuego }) => {
           icon: "success",
         });
         reset();
+        navegacion("/administrador");
       } else {
         Swal.fire({
           icon: "error",
@@ -70,7 +71,7 @@ const FormularioJuego = ({ crearJuego }) => {
           text: "Has editado el juego con éxito",
           icon: "success",
         });
-        navegacion("/administrador-juego/crear");
+        navegacion("/administrador");
       } else {
         Swal.fire({
           icon: "error",
