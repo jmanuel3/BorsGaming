@@ -35,7 +35,7 @@ function App() {
           />
           <Route
             path="/administrador-juego/editar/:id"
-            element={<FormularioJuego crearJuego={false} />}
+            element={<FormularioJuego  />}
           />
 
           <Route path="/administrador/usuarios" element={<ListaUsuarios />} />
