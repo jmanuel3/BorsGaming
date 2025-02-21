@@ -5,16 +5,7 @@ import {
   editarJuegoAPI,
   obtenerJuegoAPI,
 } from "../../helpers/queries";
-import {
-  crearJuegoAPI,
-  editarJuegoAPI,
-  obtenerJuegoAPI,
-} from "../../helpers/queries";
 import Swal from "sweetalert2";
-import { useNavigate, useParams } from "react-router";
-import { useEffect } from "react";
-
-const FormularioJuego = ({ crearJuego }) => {
 import { useNavigate, useParams } from "react-router";
 import { useEffect } from "react";
 
@@ -24,7 +15,6 @@ const FormularioJuego = ({ crearJuego }) => {
     handleSubmit,
     formState: { errors },
     reset,
-    setValue,
     setValue,
   } = useForm();
   const { id } = useParams();
