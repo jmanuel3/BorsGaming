@@ -1,15 +1,17 @@
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { Link, NavLink } from "react-router";
+import { Container, Nav, Navbar, NavDropdown, Button } from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/borsLogo.png";
 
 const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
+  const logout = () => {
+    setUsuarioLogueado("");
+    localStorage.removeItem("userKey");
+  };
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary py-2">
       <Container>
-        <Link
-          to={"/"}
-          className="navbar-brand d-flex align-items-center justify-content-between"
-        >
+        <Link to="/" className="navbar-brand d-flex align-items-center">
           <img
             src={logo}
             alt="logo BorsGaming"
@@ -20,37 +22,34 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto gap-3">
-            <NavLink end className="nav-link" to={"/"}>
+            <NavLink end className="nav-link" to="/">
               Inicio
             </NavLink>
 
-            {usuarioLogueado.lenght > 0 ? (
-              <>
-                <NavDropdown end className="nav-link" to={"/administrador"}>
-                  <NavLink end className="nav-link" to={"/administrador"}>
-                    Gestionar juegos
-                  </NavLink>
-                  <NavLink
-                    end
-                    className="nav-link"
-                    to={"/administrador/usuarios"}
-                  >
-                    Gestionar usuarios
-                  </NavLink>
-                  <Button className="nav-link" variant="link" onClick={logout}>
-                    Logout
-                  </Button>
-                </NavDropdown>
-              </>
+            {usuarioLogueado === "admin@borsgaming.com" && (
+              <NavDropdown title="Administración" id="admin-dropdown">
+                <NavDropdown.Item as={NavLink} to="/administrador">
+                  Gestionar juegos
+                </NavDropdown.Item>
+              </NavDropdown>
+            )}
+
+            <NavLink end className="nav-link" to="/sobrenosotros">
+              Acerca de nosotros
+            </NavLink>
+
+            {usuarioLogueado ? (
+              <Button
+                variant="link"
+                className="nav-link text-danger"
+                onClick={logout}
+              >
+                Logout
+              </Button>
             ) : (
-              <>
-                <NavLink end className="nav-link" to="/sobrenosotros">
-                  Acerca de nosotros
-                </NavLink>
-                <NavLink end className="nav-link" to="/login">
-                  Login
-                </NavLink>
-              </>
+              <NavLink end className="nav-link" to="/login">
+                Login
+              </NavLink>
             )}
           </Nav>
         </Navbar.Collapse>
