@@ -7,3 +7,4 @@ const DetalleJuego = () => {
 };
 
 export default DetalleJuego;
+ 

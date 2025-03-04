@@ -9,7 +9,7 @@ import Login from "./components/pages/Login";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FormularioJuego from "./components/pages/Juego/FormularioJuego";
-import ListaUsuarios from "./components/pages/Usuarios/ListaUsuarios";
+
 import { useState } from "react";
 
 function App() {
@@ -35,10 +35,9 @@ function App() {
           />
           <Route
             path="/administrador-juego/editar/:id"
-            element={<FormularioJuego  />}
+            element={<FormularioJuego />}
           />
 
-          <Route path="/administrador/usuarios" element={<ListaUsuarios />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer></Footer>
