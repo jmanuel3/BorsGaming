@@ -13,18 +13,18 @@ import { useState } from "react";
 useNavigate;
 
 const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
-  const [busqueda, setBusqueda] = useState(""); // Estado para la búsqueda
-  const navigate = useNavigate(); // Para redirigir a la búsqueda
+  const [busqueda, setBusqueda] = useState(""); 
+  const navigate = useNavigate(); 
 
   const logout = () => {
-    setUsuarioLogueado(""); // Borra el usuario logueado
-    localStorage.removeItem("userKey"); // Elimina la sesión guardada
+    setUsuarioLogueado(""); 
+    localStorage.removeItem("userKey"); 
   };
 
   const manejarBusqueda = (e) => {
     e.preventDefault();
     if (busqueda.trim() !== "") {
-      navigate(`/?search=${busqueda}`); // Redirige a Inicio con el query de búsqueda
+      navigate(`/?search=${busqueda}`);
     }
   };
 
