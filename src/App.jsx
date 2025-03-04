@@ -27,7 +27,10 @@ function App() {
           <Route path="/" element={<Inicio />} />
 
           <Route path="/sobrenosotros" element={<SobreNosotros />} />
-          <Route path="/login" element={<Login />} />
+          <Route
+            path="/login"
+            element={<Login setUsuarioLogueado={setUsuarioLogueado} />}
+          />
           <Route path="/administrador" element={<Administrador />} />
           <Route
             path="/administrador-juego/crear"
