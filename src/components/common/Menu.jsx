@@ -1,8 +1,33 @@
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { Link, NavLink } from "react-router";
+import {
+  Container,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button,
+} from "react-bootstrap";
+import { Link, NavLink, useNavigate } from "react-router";
 import logo from "../../assets/borsLogo.png";
+import { useState } from "react";
+useNavigate;
 
 const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
+  const [busqueda, setBusqueda] = useState(""); // Estado para la búsqueda
+  const navigate = useNavigate(); // Para redirigir a la búsqueda
+
+  const logout = () => {
+    setUsuarioLogueado(""); // Borra el usuario logueado
+    localStorage.removeItem("userKey"); // Elimina la sesión guardada
+  };
+
+  const manejarBusqueda = (e) => {
+    e.preventDefault();
+    if (busqueda.trim() !== "") {
+      navigate(`/?search=${busqueda}`); // Redirige a Inicio con el query de búsqueda
+    }
+  };
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary py-2">
       <Container>
@@ -53,6 +78,19 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
               </>
             )}
           </Nav>
+          <Form className="d-flex ms-3" onSubmit={manejarBusqueda}>
+            <FormControl
+              type="search"
+              placeholder="Buscar juegos..."
+              className="me-2"
+              aria-label="Buscar"
+              value={busqueda}
+              onChange={(e) => setBusqueda(e.target.value)}
+            />
+            <Button variant="dark" type="submit">
+              Buscar
+            </Button>
+          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
