@@ -9,6 +9,7 @@ import Login from "./components/pages/Login";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FormularioJuego from "./components/pages/Juego/FormularioJuego";
+import DetalleJuego from "./components/pages/DetalleJuego";
 
 import { useState } from "react";
 
@@ -37,7 +38,7 @@ function App() {
             path="/administrador-juego/editar/:id"
             element={<FormularioJuego />}
           />
-
+          <Route path="/detalles/:id" element={<DetalleJuego />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
         <Footer></Footer>

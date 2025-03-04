@@ -1,33 +1,44 @@
+import React from "react";
 import { Button, Card, Col } from "react-bootstrap";
-import { Cart3, PlusCircle, SuitHeart } from "react-bootstrap-icons";
-import { Link } from "react-router-dom";
+import { PlusCircle } from "react-bootstrap-icons";
+import { useNavigate } from "react-router-dom";
 
 const CardJuego = ({ juego }) => {
+  const navigate = useNavigate();
+
+  const irADetalles = () => {
+    navigate(`/detalles/${juego.id}`); // Redirige a la página de detalles con el ID del juego
+  };
+
   return (
     <Col>
-      <Card className="h-100 bg-secondary">
-        <Card.Img
-          variant="top"
-          src={juego.imagen}
-          className="img-fluid rounded"
-          alt={`Imagen de ${juego.nombreProducto}`}
-        />
+      <Card className="h-100 bg-secondary shadow-lg border-0">
+        <div className="image-container">
+          <Card.Img
+            variant="top"
+            src={juego.imagen}
+            className="img-fluid rounded-top game-image"
+            alt={`Imagen de videojuego ${juego.nombre}`}
+          />
+        </div>
         <Card.Body className="text-light d-flex flex-column">
-          <Card.Title>
-            <strong>{juego.nombreProducto}</strong>
+          <Card.Title className="text-center">
+            <strong>{juego.nombre}</strong>
           </Card.Title>
-          <Card.Text>{juego.descripcion}</Card.Text>
-          <section className="d-flex gap-2 mt-auto">
-            <Button variant="dark" size="md" className="w-100">
-              Añadir al carrito <Cart3 />
-            </Button>
-            <Button variant="dark" size="md" className="w-100">
-              Añadir a favoritos <SuitHeart />
-            </Button>
-            <Link to={`/detalle/${juego.id}`} className="btn btn-dark w-100">
+          <Card.Text className="text-truncate">{juego.descripcion}</Card.Text>
+          <Card.Text className="fw-bold text-center">
+            Precio: {juego.precio}
+          </Card.Text>
+          <div className="d-flex flex-column gap-2 mt-auto">
+            <Button
+              variant="dark"
+              size="md"
+              className="w-100"
+              onClick={irADetalles}
+            >
               Detalles del Juego <PlusCircle />
-            </Link>
-          </section>
+            </Button>
+          </div>
         </Card.Body>
       </Card>
     </Col>
