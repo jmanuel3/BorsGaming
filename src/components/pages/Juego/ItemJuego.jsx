@@ -2,6 +2,7 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router";
 import { borrarJuegoAPI, listarJuegoAPI } from "../../helpers/queries";
 import { PencilSquare, Trash2Fill } from "react-bootstrap-icons";
+Trash2Fill;
 
 const ItemJuego = ({ juego }) => {
   const borrarJuego = async () => {
@@ -43,15 +44,21 @@ const ItemJuego = ({ juego }) => {
       <td>{juego.desarrollador}</td>
       <td>{juego.reseñas}</td>
       <td className="text-center">
-        <Link
-          className="btn btn-warning me-lg-2"
-          to={`/administrador-juego/editar/${juego.id}`}
-        >
-          <i className="bi bi-pencil-square"></i>
-        </Link>
-        <Button variant="danger" onClick={borrarJuego}>
-          <i className="bi bi-trash"></i>
-        </Button>
+        <section className="d-flex justify-content-between">
+          <Link
+            className="btn btn-warning me-lg-2"
+            to={`/administrador-juego/editar/${juego.id}`}
+          >
+            <i className="bi bi-pencil-square">
+              <PencilSquare />
+            </i>
+          </Link>
+          <Button variant="danger" onClick={borrarJuego}>
+            <i className="bi bi-trash">
+              <Trash2Fill />
+            </i>
+          </Button>
+        </section>
       </td>
     </tr>
   );

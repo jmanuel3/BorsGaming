@@ -143,6 +143,18 @@
       "descripcion": "Construye un imperio, expande tu civilización y domina el mundo con estrategia y diplomacia.",
       "descripcion_larga": "Civilization VI te desafía a construir una civilización que resista el paso del tiempo. Desde la antigüedad hasta la era moderna, lidera tu imperio, innova tecnologías, haz alianzas y conquista a tus rivales. Con múltiples caminos hacia la victoria, cada partida es una nueva historia por escribir. ¿Serás un líder benevolente o un conquistador implacable?",
       "id": 18
+    },
+    {
+      "nombreProducto": "Hell let Loose",
+      "precio": "40",
+      "categoria": "Bélico",
+      "requisitos_sistema": "Windows 10, i5-8400, 16GB RAM, GTX 1060, 30GB",
+      "Desarrollador": "Black Matter",
+      "imagen": "https://images.pexels.com/photos/404995/pexels-photo-404995.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "reseñas": "5",
+      "descripcion": "Un shooter táctico en primera persona ambientado en la Segunda Guerra Mundial con combates realistas y en equipo.",
+      "descripcion_larga": "Hell Let Loose es un shooter de guerra realista que te sumerge en el caos de la Segunda Guerra Mundial con batallas a gran escala. Con mapas basados en ubicaciones históricas, un sistema de escuadrones y un enfoque en la estrategia, cada partida es una experiencia intensa. Coordina con tu equipo, maneja vehículos blindados y domina el campo de batalla en uno de los FPS más auténticos del género.",
+      "id": 19
     }
   ]
 }
