@@ -1,8 +1,34 @@
-# React + Vite
+# 🎮 BorsGaming - Ecommerce Gamer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenido a **BorsGaming**, un ecommerce especializado en la venta de videojuegos. Este proyecto fue desarrollado utilizando **React**, con una interfaz moderna y completamente responsiva. 🕹️🔥  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 **Características del Proyecto**
+
+✅ Catálogo dinámico de videojuegos 🎮  
+✅ Búsqueda de juegos por nombre 🔍  
+✅ Filtrado de juegos por categoría 🏷️  
+✅ Sistema de autenticación con roles (admin/usuario) 🔑  
+✅ Panel de administración para CRUD de productos ⚙️  
+✅ Almacenamiento de datos con `JSON-Server` 🗄️  
+✅ Alertas interactivas con `SweetAlert2` 🎨  
+✅ Deploy en **Netlify** 🚀  
+
+---
+
+## 🛠️ **Tecnologías Utilizadas**
+
+| Tecnología          | Descripción |
+|---------------------|------------|
+| React.js           | Librería para la UI |
+| React Router       | Manejo de rutas |
+| Bootstrap         | Estilos y diseño responsivo |
+| React Bootstrap   | Componentes reutilizables |
+| React Hook Form    | Manejo de formularios |
+| SweetAlert2       | Alertas personalizadas |
+| JSON-Server       | Backend simulado para el CRUD |
+| Netlify           | Hosting del proyecto |
+
+---
+
