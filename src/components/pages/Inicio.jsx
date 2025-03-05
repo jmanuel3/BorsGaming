@@ -24,9 +24,10 @@ const Inicio = () => {
     juego.nombreProducto.toLowerCase().includes(busqueda.toLowerCase())
   );
 
-  // Obtener la categoría del primer juego encontrado (si existe)
-  const categoriaFiltrada =
-    juegosFiltrados.length > 0 ? juegosFiltrados[0].categoria : null;
+  // Obtener categorías de los juegos filtrados
+  const categoriasFiltradas = [
+    ...new Set(juegosFiltrados.map((juego) => juego.categoria)),
+  ];
 
   return (
     <Container className="my-4">
@@ -42,17 +43,25 @@ const Inicio = () => {
         />
       </Form>
 
-      {/* Mostrar solo la categoría del juego buscado */}
-      {categoriaFiltrada && (
-        <div>
-          <h1 className="text-dark mt-4">{categoriaFiltrada}</h1>
-          <Row md={3} lg={4} className="g-4">
-            {juegosFiltrados.map((juego) => (
-              <CardJuego key={juego.id} juego={juego} />
-            ))}
-          </Row>
-        </div>
-      )}
+      {/* Mostrar solo las categorías que contienen juegos en la búsqueda */}
+      {categoriasFiltradas.map((categoria, index) => {
+        const juegosPorCategoria = juegosFiltrados.filter(
+          (juego) => juego.categoria === categoria
+        );
+
+        return (
+          juegosPorCategoria.length > 0 && (
+            <div key={index}>
+              <h1 className="text-dark mt-4">{categoria}</h1>
+              <Row md={3} lg={4} className="g-4">
+                {juegosPorCategoria.map((juego) => (
+                  <CardJuego key={juego.id} juego={juego} />
+                ))}
+              </Row>
+            </div>
+          )
+        );
+      })}
 
       {juegosFiltrados.length === 0 && (
         <h5 className="text-dark text-center mt-3">

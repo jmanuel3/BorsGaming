@@ -1,31 +1,11 @@
-import {
-  Container,
-  Nav,
-  Navbar,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap";
-import { Link, NavLink, useNavigate } from "react-router";
+import { Container, Nav, Navbar, NavDropdown, Button } from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom"; // Corregido import de react-router-dom
 import logo from "../../assets/borsLogo.png";
-import { useState } from "react";
-useNavigate;
 
 const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
-  const [busqueda, setBusqueda] = useState(""); 
-  const navigate = useNavigate(); 
-
   const logout = () => {
-    setUsuarioLogueado(""); 
-    localStorage.removeItem("userKey"); 
-  };
-
-  const manejarBusqueda = (e) => {
-    e.preventDefault();
-    if (busqueda.trim() !== "") {
-      navigate(`/?search=${busqueda}`);
-    }
+    setUsuarioLogueado("");
+    localStorage.removeItem("userKey");
   };
 
   return (
@@ -72,19 +52,6 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
               </NavLink>
             )}
           </Nav>
-          <Form className="d-flex ms-3" onSubmit={manejarBusqueda}>
-            <FormControl
-              type="search"
-              placeholder="Buscar juegos..."
-              className="me-2"
-              aria-label="Buscar"
-              value={busqueda}
-              onChange={(e) => setBusqueda(e.target.value)}
-            />
-            <Button variant="dark" type="submit">
-              Buscar
-            </Button>
-          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
