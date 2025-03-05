@@ -7,7 +7,7 @@ const SobreNosotros = () => {
       className="mainSection my-5"
       style={{
         background:
-          "linear-gradient(180deg,rgb(151, 22, 151),rgb(255, 255, 255))",
+          "linear-gradient(180deg,rgb(216, 214, 214),rgb(255, 255, 255))",
         color: "#ffffff",
         padding: "20px",
         borderRadius: "10px",
@@ -40,7 +40,7 @@ const SobreNosotros = () => {
             mi deseo de combinar esa pasión con mi experiencia en desarrollo.
           </p>
         </Col>
-        <Col md={1}></Col> {/* Espacio entre las cajas */}
+        <Col md={1}></Col>
         <Col md={7} className="bg-secondary text-light p-4 rounded shadow-sm">
           <h5 className="text-center mb-3">Mi visión</h5>
           <p>

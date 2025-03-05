@@ -16,9 +16,9 @@
 .game-image {
   height: 350px;
   width: 100%;
-  object-fit: cover; /* Mantiene proporción y recorta el exceso */
+  object-fit: cover;
 }
 
 .image-container {
-  overflow: hidden; /* Evita desbordamientos */
+  overflow: hidden;
 }
