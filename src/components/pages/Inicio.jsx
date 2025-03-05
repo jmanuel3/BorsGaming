@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { listarJuegoAPI } from "../helpers/queries";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import CardJuego from "../pages/Juego/CardJuego";
 
 const Inicio = () => {
@@ -17,15 +17,24 @@ const Inicio = () => {
       setJuegos(datos);
     }
   };
+  const categorias = [...new Set(juegos.map((juego) => juego.categoria))];
 
   return (
     <Container className="my-4">
-      <h2 className="text-light">Catálogo de Juegos</h2>
-      <Row md={3} lg={4} className="g-4">
-        {juegos.map((juego) => (
-          <CardJuego key={juego.id} juego={juego} />
-        ))}
-      </Row>
+      <h2 className="text-dark text-center">Catálogo de Juegos</h2>
+
+      {categorias.map((categoria, index) => (
+        <div key={index}>
+          <h1 className="text-dark mt-4">{categoria}</h1>
+          <Row md={3} lg={4} className="g-4">
+            {juegos
+              .filter((juego) => juego.categoria === categoria)
+              .map((juego) => (
+                <CardJuego key={juego.id} juego={juego} />
+              ))}
+          </Row>
+        </div>
+      ))}
     </Container>
   );
 };

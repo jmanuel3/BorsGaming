@@ -12,3 +12,13 @@
 .mainSection {
   flex-grow: 1;
 }
+
+.game-image {
+  height: 350px;
+  width: 100%;
+  object-fit: cover; /* Mantiene proporción y recorta el exceso */
+}
+
+.image-container {
+  overflow: hidden; /* Evita desbordamientos */
+}
