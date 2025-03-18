@@ -108,6 +108,7 @@ const FormularioJuego = ({ crearJuego }) => {
           <Form.Label>Precio</Form.Label>
           <Form.Control
             type="number"
+            step="0.01"
             placeholder="Por ejemplo: 70"
             {...register("precio", {
               required: "El precio es un valor obligatorio",

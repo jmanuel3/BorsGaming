@@ -11,7 +11,7 @@ export const crearJuegoAPI = async (juegoNuevo) => {
       },
       body: JSON.stringify(juegoNuevo),
     });
-   
+
     return respuesta;
   } catch (error) {
     console.error(error);
@@ -22,7 +22,7 @@ export const crearJuegoAPI = async (juegoNuevo) => {
 export const listarJuegoAPI = async () => {
   try {
     const respuesta = await fetch("http://localhost:3000/productos");
-  
+
     return respuesta;
   } catch (error) {
     console.error(error);
@@ -33,7 +33,7 @@ export const listarJuegoAPI = async () => {
 export const obtenerJuegoAPI = async (id) => {
   try {
     const respuesta = await fetch("http://localhost:3000/productos/" + id);
-    
+
     return respuesta;
   } catch (error) {
     console.error(error);
@@ -46,7 +46,11 @@ export const borrarJuegoAPI = async (id) => {
     const respuesta = await fetch("http://localhost:3000/productos/" + id, {
       method: "DELETE",
     });
-    
+
+    if (!respuesta.ok) {
+      throw new Error("No se pudo eliminar el juego");
+    }
+
     return respuesta;
   } catch (error) {
     console.error(error);
@@ -63,14 +67,13 @@ export const editarJuegoAPI = async (juegoEditado, id) => {
       },
       body: JSON.stringify(juegoEditado),
     });
-   
+
     return respuesta;
   } catch (error) {
     console.error(error);
     return false;
   }
 };
-
 
 const adminUsuario = {
   email: "admin@borsgaming.com",

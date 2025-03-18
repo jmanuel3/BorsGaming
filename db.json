@@ -2,7 +2,7 @@
   "productos": [
     {
       "nombreProducto": "Call of Duty: Modern Warfare II",
-      "precio": "45",
+      "precio": "45.98",
       "categoria": "Bélico",
       "requisitos_sistema": "Windows 10, i5-6600, 12GB RAM, GTX 970, 100GB",
       "Desarrollador": "Infinity Ward",
@@ -12,26 +12,22 @@
     },
     {
       "nombreProducto": "Battlefield 2042",
-      "precio": "35",
+      "precio": "35.54",
       "categoria": "Bélico",
       "requisitos_sistema": "Windows 10, i5-6600K, 16GB RAM, RTX 3060, 100GB",
       "Desarrollador": "DICE",
       "imagen": "https://images.pexels.com/photos/163347/war-desert-guns-gunshow-163347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "reseñas": "4",
-      "descripcion": "Un shooter multijugador masivo con mapas dinámicos, clima extremo y batallas de hasta 128 jugadores.",
-      "descripcion_larga": "Battlefield 2042 es un shooter en primera persona que redefine la guerra moderna con batallas a gran escala, mapas dinámicos y eventos climáticos extremos. Experimenta intensos combates con hasta 128 jugadores en escenarios inmersivos donde cada decisión y estrategia puede cambiar el curso de la partida. Con un amplio arsenal de armas, vehículos futuristas y un innovador sistema de especialistas, este título lleva la experiencia Battlefield a un nuevo nivel.",
       "id": 8
     },
     {
       "nombreProducto": "FIFA 23",
-      "precio": "15",
+      "precio": "15.48",
       "categoria": "Deportes",
       "requisitos_sistema": " Windows 10, i5-6600K, 8GB RAM, GTX 1050 Ti, 50GB",
       "Desarrollador": "EA Sports",
       "imagen": "https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg?auto=compress&cs=tinysrgb&w=600",
       "reseñas": "4",
-      "descripcion": "Vive el fútbol como nunca antes con jugabilidad realista, licencias oficiales y el innovador HyperMotion2.",
-      "descripcion_larga": "FIFA 23 te lleva al campo con la simulación de fútbol más avanzada hasta la fecha. Gracias a la tecnología HyperMotion2, las animaciones son más fluidas y realistas, brindando una experiencia auténtica en cada partido. Juega con equipos y ligas oficiales, disfruta del modo Carrera mejorado y compite en el icónico Ultimate Team. Ya sea en línea o contra la IA, cada encuentro se siente como una verdadera final.",
       "id": 9
     },
     {
