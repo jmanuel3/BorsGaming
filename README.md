@@ -32,3 +32,11 @@ Bienvenido a **BorsGaming**, un ecommerce especializado en la venta de videojueg
 
 ---
 
+## 👨‍💻 Autor del Proyecto
+
+**Nombre:** José Manuel Carrasco Rivero  
+**Email:** josem199806@gmail.com 
+**LinkedIn:** www.linkedin.com/in/jose-manuel-carrasco-rivero-719035258  
+
+> Este proyecto fue desarrollado como parte del proyecto final de RollingCode Full-Stack Career.
+
