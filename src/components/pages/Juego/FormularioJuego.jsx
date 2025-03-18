@@ -18,35 +18,32 @@ const FormularioJuego = ({ crearJuego }) => {
     setValue,
   } = useForm();
   const { id } = useParams();
- 
+
   const navegacion = useNavigate();
 
   useEffect(() => {
-    if (crearJuego === false) {
+    if (!crearJuego) {
       cargarJuego();
     }
-  }, []);
+  }, [id]);
 
   const cargarJuego = async () => {
-
     const respuesta = await obtenerJuegoAPI(id);
-    if (respuesta.status === 200) {
-     
+    if (respuesta.ok) {
       const datos = await respuesta.json();
-  
+
       setValue("nombreProducto", datos.nombreProducto);
       setValue("precio", datos.precio);
       setValue("imagen", datos.imagen);
       setValue("categoria", datos.categoria);
-      setValue("requisitos_sistema", datos.requisitosSistema);
-      setValue("desarrollador", datos.desarrollador);
+      setValue("requisitos_sistema", datos.requisitos_sistema);
+      setValue("Desarrollador", datos.Desarrollador);
       setValue("reseñas", datos.reseñas);
     }
   };
 
   const onSubmit = async (juego) => {
     if (crearJuego) {
-     
       const respuesta = await crearJuegoAPI(juego);
       if (respuesta.status === 201) {
         Swal.fire({

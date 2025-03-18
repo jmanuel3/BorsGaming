@@ -40,8 +40,8 @@ const ItemJuego = ({ juego }) => {
         ></img>
       </td>
       <td>{juego.categoria}</td>
-      <td>{juego.requisitosSistema}</td>
-      <td>{juego.desarrollador}</td>
+      <td>{juego.requisitos_sistema}</td>
+      <td>{juego.Desarrollador}</td>
       <td>{juego.reseñas}</td>
       <td className="text-center">
         <section className="d-flex justify-content-between">
