@@ -10,7 +10,7 @@ const ItemJuego = ({ juego }) => {
     if (respuesta.status === 200) {
       const respuestaListaProductos = await listarJuegoAPI();
       if (respuestaListaProductos.status === 200) {
-        //actualizar la tabla
+  
         const datos = await respuestaListaProductos.json();
         setListaProductos(datos);
       }

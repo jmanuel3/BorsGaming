@@ -19,12 +19,11 @@ const Inicio = () => {
     }
   };
 
-  // Filtrar juegos por nombre basándose en la búsqueda
+
   const juegosFiltrados = juegos.filter((juego) =>
     juego.nombreProducto.toLowerCase().includes(busqueda.toLowerCase())
   );
 
-  // Obtener categorías de los juegos filtrados
   const categoriasFiltradas = [
     ...new Set(juegosFiltrados.map((juego) => juego.categoria)),
   ];
@@ -33,7 +32,6 @@ const Inicio = () => {
     <Container className="my-4">
       <h2 className="text-dark text-center">Catálogo de Juegos</h2>
 
-      {/* Barra de búsqueda */}
       <Form className="mb-3">
         <Form.Control
           type="text"
@@ -43,7 +41,6 @@ const Inicio = () => {
         />
       </Form>
 
-      {/* Mostrar solo las categorías que contienen juegos en la búsqueda */}
       {categoriasFiltradas.map((categoria, index) => {
         const juegosPorCategoria = juegosFiltrados.filter(
           (juego) => juego.categoria === categoria

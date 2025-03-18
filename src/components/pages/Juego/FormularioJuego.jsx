@@ -18,7 +18,7 @@ const FormularioJuego = ({ crearJuego }) => {
     setValue,
   } = useForm();
   const { id } = useParams();
-  console.log("ID del juego recibido:", id);
+ 
   const navegacion = useNavigate();
 
   useEffect(() => {
@@ -28,12 +28,12 @@ const FormularioJuego = ({ crearJuego }) => {
   }, []);
 
   const cargarJuego = async () => {
-    //pedir a la api un producto
+
     const respuesta = await obtenerJuegoAPI(id);
     if (respuesta.status === 200) {
-      //dibujar el producto en el form
+     
       const datos = await respuesta.json();
-      console.log(datos);
+  
       setValue("nombreProducto", datos.nombreProducto);
       setValue("precio", datos.precio);
       setValue("imagen", datos.imagen);
@@ -46,7 +46,7 @@ const FormularioJuego = ({ crearJuego }) => {
 
   const onSubmit = async (juego) => {
     if (crearJuego) {
-      console.log(juego);
+     
       const respuesta = await crearJuegoAPI(juego);
       if (respuesta.status === 201) {
         Swal.fire({

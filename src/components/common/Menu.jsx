@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/borsLogo.png";
 
 const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
-  console.log("🔍 Usuario en Navbar:", usuarioLogueado);
+
 
   const logout = () => {
     localStorage.removeItem("userKey");

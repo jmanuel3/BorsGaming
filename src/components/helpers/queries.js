@@ -1,3 +1,7 @@
+//POST - Crear producto => 201
+//GET - Obtener producto/s => 200. En su función solo recibe un parámetro
+//DELETE - Borrar 1 producto
+// PUT o PATCH - Put edita todo el objeto. Patch edita solo una parte del objeto
 export const crearJuegoAPI = async (juegoNuevo) => {
   try {
     const respuesta = await fetch("http://localhost:3000/productos", {
@@ -7,7 +11,7 @@ export const crearJuegoAPI = async (juegoNuevo) => {
       },
       body: JSON.stringify(juegoNuevo),
     });
-    console.log(respuesta);
+   
     return respuesta;
   } catch (error) {
     console.error(error);
@@ -18,7 +22,7 @@ export const crearJuegoAPI = async (juegoNuevo) => {
 export const listarJuegoAPI = async () => {
   try {
     const respuesta = await fetch("http://localhost:3000/productos");
-    console.log(respuesta);
+  
     return respuesta;
   } catch (error) {
     console.error(error);
@@ -29,7 +33,7 @@ export const listarJuegoAPI = async () => {
 export const obtenerJuegoAPI = async (id) => {
   try {
     const respuesta = await fetch("http://localhost:3000/productos/" + id);
-    console.log(respuesta);
+    
     return respuesta;
   } catch (error) {
     console.error(error);
@@ -42,7 +46,7 @@ export const borrarJuegoAPI = async (id) => {
     const respuesta = await fetch("http://localhost:3000/productos/" + id, {
       method: "DELETE",
     });
-    console.log(respuesta);
+    
     return respuesta;
   } catch (error) {
     console.error(error);
@@ -59,17 +63,18 @@ export const editarJuegoAPI = async (juegoEditado, id) => {
       },
       body: JSON.stringify(juegoEditado),
     });
-    console.log(respuesta);
+   
     return respuesta;
   } catch (error) {
     console.error(error);
     return false;
   }
 };
+
+
 const adminUsuario = {
   email: "admin@borsgaming.com",
   password: "12345678",
-  rol: "admin",
 };
 
 export const login = (usuario) => {
@@ -77,8 +82,8 @@ export const login = (usuario) => {
     usuario.email === adminUsuario.email &&
     usuario.password === adminUsuario.password
   ) {
-    localStorage.setItem("userKey", JSON.stringify(adminUsuario));
-    return adminUsuario;
+    localStorage.setItem("userKey", JSON.stringify(adminUsuario.email));
+    return true;
   } else {
     return false;
   }
