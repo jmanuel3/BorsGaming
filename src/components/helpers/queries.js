@@ -1,7 +1,3 @@
-//POST - Crear producto => 201
-//GET - Obtener producto/s => 200. En su función solo recibe un parámetro
-//DELETE - Borrar 1 producto
-// PUT o PATCH - Put edita todo el objeto. Patch edita solo una parte del objeto
 export const crearJuegoAPI = async (juegoNuevo) => {
   try {
     const respuesta = await fetch("http://localhost:3000/productos", {
@@ -70,11 +66,10 @@ export const editarJuegoAPI = async (juegoEditado, id) => {
     return false;
   }
 };
-
-//usuario administrador
 const adminUsuario = {
   email: "admin@borsgaming.com",
   password: "12345678",
+  rol: "admin",
 };
 
 export const login = (usuario) => {
@@ -82,8 +77,8 @@ export const login = (usuario) => {
     usuario.email === adminUsuario.email &&
     usuario.password === adminUsuario.password
   ) {
-    localStorage.setItem("userKey", JSON.stringify(adminUsuario.email));
-    return true;
+    localStorage.setItem("userKey", JSON.stringify(adminUsuario));
+    return adminUsuario;
   } else {
     return false;
   }

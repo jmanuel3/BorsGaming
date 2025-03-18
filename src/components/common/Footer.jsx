@@ -4,10 +4,8 @@ const Footer = () => {
   return (
     <footer className="text-center bg-body-tertiary text-dark py-4">
       <div className="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
-        {/* Texto */}
         <p className="mb-0 me-md-3">&copy; Todos los derechos reservados</p>
 
-        {/* Íconos */}
         <div className="d-flex gap-3">
           <a
             href="https://facebook.com"

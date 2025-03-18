@@ -9,23 +9,26 @@ const Login = ({ setUsuarioLogueado }) => {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm();
 
   const navegacion = useNavigate();
 
   const onSubmit = (usuario) => {
-    if (login(usuario)) {
-      setUsuarioLogueado(usuario);
+    const usuarioAutenticado = login(usuario);
+
+    if (usuarioAutenticado) {
+      setUsuarioLogueado(usuarioAutenticado);
+
       Swal.fire({
         title: "Bienvenido gamer!",
         text: "A disfrutar de la forma más barata.",
         imageUrl:
-          "https://images.pexels.com/photos/1293261/pexels-photo-1293261.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/1293261/pexels-photo-1293261.jpeg",
         imageWidth: 400,
         imageHeight: 200,
         imageAlt: "Custom image",
       });
+
       navegacion("/administrador");
     } else {
       Swal.fire({
@@ -46,55 +49,27 @@ const Login = ({ setUsuarioLogueado }) => {
                 <Card.Title>Login</Card.Title>
               </div>
               <Form onSubmit={handleSubmit(onSubmit)}>
-                <Form.Group className="mb-3" controlId="formGroupEmail">
+                <Form.Group className="mb-3">
                   <Form.Label>Correo electrónico</Form.Label>
                   <Form.Control
                     type="email"
-                    placeholder="juegos@baratisimos.com"
                     {...register("email", {
                       required: "El email es obligatorio",
-                      minLength: {
-                        value: 11,
-                        message: "Debe ingresar como mínimo 11 caracteres",
-                      },
-                      maxLength: {
-                        value: 50,
-                        message: "Debe ingresar como máximo 50 caracteres",
-                      },
                     })}
                   />
-                  <Form.Text className="text-danger">
-                    {errors.email?.message}
-                  </Form.Text>
                 </Form.Group>
 
-                <Form.Group className="mb-4" controlId="formGroupPassword">
+                <Form.Group className="mb-4">
                   <Form.Label>Contraseña</Form.Label>
                   <Form.Control
                     type="password"
-                    placeholder="Quierojuegosbaratos1"
                     {...register("password", {
-                      required: "La contraseña es un campo obligatorio",
-                      minLength: {
-                        value: 8,
-                        message: "Debe ingresar como minimo 8 caracteres",
-                      },
-                      maxLength: {
-                        value: 20,
-                        message: "Debe ingresar como maximo 20 caracteres",
-                      },
+                      required: "La contraseña es obligatoria",
                     })}
                   />
-                  <Form.Text className="text-danger">
-                    {errors.password?.message}
-                  </Form.Text>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                  <Form.Check type="checkbox" label="Recordar credenciales" />
-                </Form.Group>
-
-                <div className=" justify-content-center">
+                <div className="justify-content-center">
                   <Button variant="dark" type="submit">
                     Enviar
                   </Button>

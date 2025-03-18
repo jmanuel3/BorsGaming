@@ -1,11 +1,13 @@
 import { Container, Nav, Navbar, NavDropdown, Button } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom"; // Corregido import de react-router-dom
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/borsLogo.png";
 
 const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
+  console.log("🔍 Usuario en Navbar:", usuarioLogueado);
+
   const logout = () => {
-    setUsuarioLogueado("");
     localStorage.removeItem("userKey");
+    setUsuarioLogueado(null);
   };
 
   return (
@@ -26,8 +28,8 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
               Inicio
             </NavLink>
 
-            {usuarioLogueado === "admin@borsgaming.com" && (
-              <NavDropdown title="Administración" id="admin-dropdown">
+            {usuarioLogueado?.rol === "admin" && (
+              <NavDropdown title="Administración">
                 <NavDropdown.Item as={NavLink} to="/administrador">
                   Gestionar juegos
                 </NavDropdown.Item>
