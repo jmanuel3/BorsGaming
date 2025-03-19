@@ -38,10 +38,10 @@ const DetalleJuego = () => {
             <h2>{juego.nombreProducto}</h2>
           </Card.Title>
           <Card.Text>
-            {juego.descripcion || "Descripción no disponible."}
+            {juego.descripcionCorta || "Descripción no disponible."}
           </Card.Text>
           <Card.Text>
-            {juego.descripcion_larga || "Descripción no disponible."}
+            {juego.descripcionLarga || "Descripción no disponible."}
           </Card.Text>
           <Card.Text className="fw">Precio: {juego.precio}</Card.Text>
           <Button variant="dark" href="/">

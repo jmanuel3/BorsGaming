@@ -38,6 +38,9 @@ const FormularioJuego = ({ crearJuego }) => {
       setValue("categoria", datos.categoria);
       setValue("requisitos_sistema", datos.requisitos_sistema);
       setValue("Desarrollador", datos.Desarrollador);
+      setValue("descripcionCorta", datos.descripcionCorta);
+      setValue("descripcionLarga", datos.descripcionLarga);
+
       setValue("reseñas", datos.reseñas);
     }
   };
@@ -209,6 +212,38 @@ const FormularioJuego = ({ crearJuego }) => {
           ></FormControl>
           <Form.Text className="text-danger">
             {errors.imagen?.message}
+          </Form.Text>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formDescripcionCorta">
+          <Form.Label>Descripción Corta</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Ejemplo: Juego de acción intensa..."
+            {...register("descripcionCorta", {
+              required: "Debe ingresar una descripción corta",
+              minLength: { value: 10, message: "Mínimo 10 caracteres" },
+              maxLength: { value: 100, message: "Máximo 100 caracteres" },
+            })}
+          />
+          <Form.Text className="text-danger">
+            {errors.descripcionCorta?.message}
+          </Form.Text>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formDescripcionLarga">
+          <Form.Label>Descripción Larga</Form.Label>
+          <Form.Control
+            as="textarea"
+            rows={4}
+            placeholder="Ejemplo: Un emocionante juego de disparos en primera persona con..."
+            {...register("descripcionLarga", {
+              required: "Debe ingresar una descripción larga",
+              minLength: { value: 20, message: "Mínimo 20 caracteres" },
+            })}
+          />
+          <Form.Text className="text-danger">
+            {errors.descripcionLarga?.message}
           </Form.Text>
         </Form.Group>
 
