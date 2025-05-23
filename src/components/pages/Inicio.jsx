@@ -5,8 +5,7 @@ import CardJuego from "../pages/Juego/CardJuego";
 
 const Inicio = () => {
   const [juegos, setJuegos] = useState([]);
-  const [busqueda, setBusqueda] = useState(""); // Estado para la búsqueda
-
+  const [busqueda, setBusqueda] = useState(""); 
   useEffect(() => {
     obtenerJuegos();
   }, []);

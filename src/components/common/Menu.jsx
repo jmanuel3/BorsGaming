@@ -1,13 +1,14 @@
 import { Container, Nav, Navbar, NavDropdown, Button } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/borsLogo.png";
 
 const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
-
+  const navigate = useNavigate();
 
   const logout = () => {
     localStorage.removeItem("userKey");
     setUsuarioLogueado(null);
+    navigate("/");
   };
 
   return (

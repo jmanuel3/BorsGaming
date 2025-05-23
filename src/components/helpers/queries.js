@@ -10,8 +10,6 @@ export const crearJuegoAPI = async (juegoNuevo) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(juegoNuevo),
-      descripcionCorta: juegoNuevo.descripcionCorta,
-      descripcionLarga: juegoNuevo.descripcionLarga,
     });
 
     return respuesta;
