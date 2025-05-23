@@ -1,30 +1,6 @@
 {
   "productos": [
     {
-      "nombreProducto": "Resident Evil 4 Remake",
-      "precio": "29",
-      "categoria": "Terror",
-      "requisitos_sistema": "Windows 10, i7-8700, 16GB RAM, RTX 2060, 50GB",
-      "Desarrollador": "Capcom",
-      "imagen": "https://www.capcom-games.com/qa/re4/images/wallpaper/re4-1440x1280.jpg",
-      "descripcionCorta": "Un clásico del terror reinventado con gráficos y jugabilidad mejorada.",
-      "descripcionLarga": "Resident Evil 4 Remake moderniza el icónico survival horror con gráficos de última generación, mecánicas de combate más precisas y una atmósfera aún más tensa. Acompaña a Leon S. Kennedy en su misión para rescatar a la hija del presidente, enfrentando horrores indescriptibles y enemigos implacables en una aventura que mantiene el espíritu del original.\n\n",
-      "reseñas": "5",
-      "id": 15
-    },
-    {
-      "nombreProducto": "Outlast 2",
-      "precio": "23",
-      "categoria": "Terror",
-      "requisitos_sistema": "Windows 10, i5-760, 8GB RAM, GTX 660, 30GB",
-      "Desarrollador": "Red Barrels",
-      "imagen": "https://cdn.mos.cms.futurecdn.net/gHzdz4qahxySeNBNB6Udsh.jpg",
-      "descripcionCorta": "Horror psicológico extremo con una historia aterradora e intensa.",
-      "descripcionLarga": "Outlast 2 te sumerge en una pesadilla de horror y locura mientras investigas una secta en un pueblo remoto. Sin armas y con una visión limitada a través de tu cámara de visión nocturna, debes huir, esconderte y sobrevivir a horrores inhumanos. Una experiencia escalofriante que te mantendrá en tensión constante.\n\n",
-      "reseñas": "5",
-      "id": 16
-    },
-    {
       "nombreProducto": "Age of Empires IV",
       "precio": "10",
       "categoria": "Estrategia",
